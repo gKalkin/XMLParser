@@ -3,7 +3,7 @@
 from flask import Flask, request, render_template, make_response, redirect
 from flask_restful import Resource, Api, reqparse
 import xml.etree.ElementTree as ET
-import re
+import re, os
 import sqlite3
 
 app = Flask(__name__)
@@ -130,4 +130,6 @@ api.add_resource(CaseList, '/cases')
 api.add_resource(NewCase, '/cases/new')
 api.add_resource(Case, '/cases/<string:name>')
 
-app.run(port=5000)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
