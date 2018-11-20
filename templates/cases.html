@@ -7,8 +7,9 @@
 	<h1>Case List</h1>
 
 	<ul>
+		{% if rows is not None %}
 		{% for row in rows %}
-		
+			
 			<li>Case Name: {{row[0]}}</li>
 			<ul>
 				<li>Plaintiff: {{row[1]}}</li>
@@ -16,6 +17,7 @@
 			</ul>
 
 		{% endfor %}
+		{% endif %}
 	</ul>
 
 	<button><a href="https://xmlocrparser.herokuapp.com/">Home</a></button>
