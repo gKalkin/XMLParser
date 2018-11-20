@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Case</title>
+</head>
+<body>
+	<h1>Upload New Case</h1>
+
+	<form action="http://127.0.0.1:5000/cases/new" method="POST" enctype=multipart/form-data >
+		<input type="text" name="casename" placeholder="Case Name">
+		<input type="file" name="casefile">
+		<input type="submit" name="Upload">
+	</form>
+
+	<button><a href="http://127.0.0.1:5000/">Home</a></button>
+	<button><a href="http://127.0.0.1:5000/cases">Case List</a></button>
+</body>
+</html>

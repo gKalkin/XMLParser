@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Case List</title>
+</head>
+<body>
+	<h1>Case List</h1>
+
+	<ul>
+		{% for row in rows %}
+		
+			<li>Case Name: {{row[0]}}</li>
+			<ul>
+				<li>Plaintiff: {{row[1]}}</li>
+				<li>Defendant: {{row[2]}}</li>
+			</ul>
+
+		{% endfor %}
+	</ul>
+
+	<button><a href="http://127.0.0.1:5000/">Home</a></button>
+	<button><a href="http://127.0.0.1:5000/cases/new">Upload new case</a></button>
+</body>
+</html>
