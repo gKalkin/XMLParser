@@ -22,6 +22,7 @@ class CaseList(Resource):
 		rows = cursor.fetchall()
 
 		connection.close()
+
 		return make_response(render_template('cases.html', rows=rows), 200)
 
 class Case(Resource):
@@ -117,7 +118,7 @@ class NewCase(Resource):
 			connection.commit()	
 			connection.close()
 
-			red = 'http://127.0.0.1:5000/cases/' + casename
+			red = 'https://xmlocrparser.herokuapp.com/cases/' + casename
 
 			return redirect(red)
 
