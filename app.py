@@ -130,5 +130,4 @@ api.add_resource(CaseList, '/cases')
 api.add_resource(NewCase, '/cases/new')
 api.add_resource(Case, '/cases/<string:name>')
 
-if __name__ == '__main__':
-	app.run(port=5000)
+app.run(port=5000)
